@@ -331,25 +331,7 @@ public class SnowingPaperService extends WallpaperService {
                         canvas.drawBitmap(mSnowFlakeBitmap, mSnowFlakeMatrix, mSnowFlakePaint);
                     }
 
-                    long currentTimeMillis = System.currentTimeMillis();
-
-                    float deltaTime = (currentTimeMillis - mLastTimeMillis) / 1000.0F;
-
-                    for (SnowFlake snowFlake : mSnowFlakes) {
-
-                        float x = snowFlake.getPositionX() + randomOffsetX();
-                        float y = snowFlake.getPositionY() + snowFlake.getVelocityY() * deltaTime;
-
-                        snowFlake.setPositionX(x);
-                        snowFlake.setPositionY(y);
-
-                        if (outOfRange(x, y)) {
-                            snowFlake.setPositionX(randomPositionX());
-                            snowFlake.setPositionY(resetPositionY());
-                        }
-                    }
-
-                    mLastTimeMillis = currentTimeMillis;
+                    mCalculateHandler.sendEmptyMessage(MSG_CALCULATE);
                 }
             } finally {
                 if (canvas != null) {

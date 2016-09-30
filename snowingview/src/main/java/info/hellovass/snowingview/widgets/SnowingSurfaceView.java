@@ -414,4 +414,5 @@ public class SnowingSurfaceView extends SurfaceView implements SurfaceHolder.Cal
         stopFall();
         mCalculatePositionThread.quit();
     }
+
 }

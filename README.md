@@ -11,6 +11,8 @@ It's a dynamic wallpaper with snowing fall down effect and accelerometer sensor.
 - 三种方式实现雪花掉落效果（原作者的View，我补充的SurfaceView以及WallpaperService）
 - 拥有加速度传感器，效果更酷
 
+## Blog
+[手摸手教你做动态壁纸](http://www.wangyuwei.me/2016/09/30/%E6%89%8B%E6%91%B8%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E5%8A%A8%E6%80%81%E5%A3%81%E7%BA%B8/)
 
 ### About Me
 
