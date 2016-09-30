@@ -1,6 +1,9 @@
 ## What's SnowingView ?
 It's a dynamic wallpaper with snowing fall down effect and accelerometer sensor. 
 
+## Install
+[apk](./apk/app-debug.apk)
+
 ## Demo
 ![SnowingView](./design/snowingwallpaper.gif)
 
