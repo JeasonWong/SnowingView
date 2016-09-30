@@ -5,33 +5,36 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import info.hellovass.snowingview.widgets.SnowingView;
+
+import info.hellovass.snowingview.widgets.SnowingSurfaceView;
 
 /**
  * Created by HelloVass on 16/8/15.
  */
 public class SampleActivity extends AppCompatActivity {
 
-  private SnowingView mSnowingView;
+    private SnowingSurfaceView mSnowingView;
 
-  private Switch mSwitch;
+    private Switch mSwitch;
 
-  @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_sample);
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sample);
 
-    mSwitch = (Switch) findViewById(R.id.sw_snowing);
-    mSnowingView = (SnowingView) findViewById(R.id.snowing_view);
+        mSwitch = (Switch) findViewById(R.id.sw_snowing);
+        mSnowingView = (SnowingSurfaceView) findViewById(R.id.snowing_view);
 
-    mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-      @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-        if (isChecked) {
-          mSnowingView.startFall();
-        } else {
-          mSnowingView.stopFall();
-        }
-      }
-    });
-  }
+                if (isChecked) {
+                    mSnowingView.startFall();
+                } else {
+                    mSnowingView.stopFall();
+                }
+            }
+        });
+    }
 }

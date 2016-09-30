@@ -7,7 +7,7 @@
     >
 
 
-  <info.hellovass.snowingview.widgets.SnowingView
+  <info.hellovass.snowingview.widgets.SnowingSurfaceView
       android:id="@+id/snowing_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
